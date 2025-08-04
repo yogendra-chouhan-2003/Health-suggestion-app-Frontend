@@ -1,0 +1,98 @@
+.header-container {
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: -60px;
+  margin-bottom: 1px;
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 20px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 45px;
+}
+
+.brand {
+  font-size: 20px;
+}
+
+.middle-section,
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.middle-section a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.middle-section a:hover {
+  color: #3688eb;
+  text-decoration: underline;
+}
+
+.right-section b {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== Mobile Menu ===== */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== Responsive Media Query ===== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .middle-section,
+  .right-section {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+  }
+
+  #menu-toggle:checked ~ .middle-section,
+  #menu-toggle:checked ~ .right-section {
+    display: flex;
+  }
+
+  .middle-section a,
+  .right-section b,
+  .right-section button {
+    padding: 8px 16px;
+  }
+}

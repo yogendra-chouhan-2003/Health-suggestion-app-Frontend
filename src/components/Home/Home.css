@@ -1,0 +1,18 @@
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #49B5F5;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;   /* ✅ Add this line */
+  margin-top: -30px;   
+}
+
+.homewhite {
+  width: 90%;
+  margin-top: -30px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  padding-bottom: 30px;
+}

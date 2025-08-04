@@ -1,0 +1,116 @@
+.how-it-works {
+  background-color: #d9f3f9;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.how-header {
+  margin-left: 150px;
+  margin-bottom: 40px;
+}
+
+.how-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.how-header p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.try-btn {
+  background: #3e3ef1;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.try-btn:hover {
+  background: #2a2acf;
+}
+
+.icon-arrow {
+  height: 20px;
+  border-radius: 50%;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.step-box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+}
+
+.step-box h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.step-box h3 span {
+  color: #aaa;
+}
+
+.icon {
+  font-size: 2rem;
+  margin: 15px 0;
+  color: #3e3ef1;
+}
+
+.step-box h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-box p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .how-header {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .step-box {
+    margin-top: 0 !important;
+  }
+}

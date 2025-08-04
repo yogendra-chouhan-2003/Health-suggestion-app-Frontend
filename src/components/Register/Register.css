@@ -1,0 +1,144 @@
+/* Outer container */
+.register-outer {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #3688EB, #9BC7F3);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner wrapper */
+.register-inner {
+  width: 100%;
+  max-width: 1100px;
+  background-color: #161F46;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Left image section */
+.left-img-box {
+  width: 100%;
+  padding: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Robot image */
+.robot-img {
+  width: 100%;
+  max-width: 800px;
+  max-height: 950px;
+  object-fit: contain;
+}
+
+/* Right form section */
+.right-form-box {
+  width: 50%;
+  background-color: #161F46;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form box */
+.form-box {
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Input group */
+.formGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #27294C;
+  border-radius: 8px;
+  padding: 12px 20px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Input field */
+.formInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Password toggle eye */
+.togglePassword {
+  position: absolute;
+  right: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+/* Checkbox alignment */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Checkbox label */
+.form-check-label {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Checkbox label links */
+.form-check-label a {
+  color: #9BC7F3;
+  text-decoration: none;
+}
+.form-check-label a:hover {
+  text-decoration: underline;
+}
+
+/* Sign Up button */
+button[type="submit"] {
+  background-color: #3688EB;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 0;
+  border-radius: 6px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: #2a6fc9;
+}
+
+/* Sign In link */
+p.text-center {
+  margin-top: 1rem;
+}
+p.text-center a {
+  color: #9BC7F3;
+  text-decoration: none;
+}
+p.text-center a:hover {
+  text-decoration: underline;
+}
+
+.text-danger {
+  color: red !important;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}

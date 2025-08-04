@@ -1,0 +1,16 @@
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #49B5F5;
+  display: flex;
+  justify-content: center;
+}
+
+.homewhite {
+  width: 95%;
+  margin-top: 60px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  padding-bottom: 30px;
+}

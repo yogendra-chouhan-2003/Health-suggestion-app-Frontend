@@ -1,0 +1,23 @@
+.trusted-section {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.trusted-text {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.trusted-icons-row span {
+  display: block;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.trusted-icon {
+  font-size: 1.5rem;
+  color: #000;
+}
