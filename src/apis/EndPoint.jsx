@@ -1,5 +1,4 @@
-//export const BASE_URL = "https://health-suggestion-app-backend.onrender.com"
-export const BASE_URL = "http://localhost:3000"
+export const BASE_URL = "https://health-suggestion-app-backend.onrender.com"
 export default {
   SIGN_UP: BASE_URL+"/user",
   SIGN_IN: BASE_URL+"/user/authentication",
