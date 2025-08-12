@@ -45,7 +45,7 @@ function Header() {
         </div>
 
         <div className="right-section">
-          {(!isUserExist()) ? <Link to="/login"><b style={{ color: "black", textDecoration: 'none' }}>Login</b></Link> : <lable onClick={handleLogout}><b style={{ color: "black", textDecoration: 'none' }}>LoginOut</b></lable>}
+          {(!isUserExist()) ? <Link to="/login"><b style={{ color: "black", textDecoration: 'none' }}>Login</b></Link> : <Link onClick={handleLogout}><b style={{ color: "black", textDecoration: 'none' }}>LogOut</b></Link>}
           <button onClick={start} className="btn btn-dark rounded-pill px-4">Get Started Free</button>
         </div>
       </div>

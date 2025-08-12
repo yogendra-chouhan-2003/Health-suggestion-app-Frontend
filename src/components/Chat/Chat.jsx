@@ -30,6 +30,7 @@ const Chat = () => {
         const res = await axios.get(EndPoint.HISTROY, {
           withCredentials: true
         });
+        console.log(res);
         setHistory(res.data.history);  
       } catch (err) {
         console.error("Failed to fetch history:", err);
@@ -52,6 +53,7 @@ const Chat = () => {
       const res = await axios.post(EndPoint.SERVER, { prompt: input }, {
         withCredentials: true
       });
+      console.log(res);
       const aiReply = res.data.response;
       setMessages(prev => [...prev, { from: 'ai', text: aiReply }]);
     } catch (err) {
