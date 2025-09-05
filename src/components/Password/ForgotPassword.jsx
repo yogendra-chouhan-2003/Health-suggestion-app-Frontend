@@ -62,7 +62,7 @@ const ForgetPassword = () => {
                 required
               />
               <button type="submit" className="btn btn-primary w-100 mt-3">
-                Verify Email
+                Forgot password
               </button>
             </form>
           )}

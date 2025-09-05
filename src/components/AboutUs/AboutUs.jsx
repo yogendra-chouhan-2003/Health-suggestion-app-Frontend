@@ -4,7 +4,10 @@ import About1 from "./about1.jpg";
 import About2 from "./chat4.jpg";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { useNavigate } from "react-router-dom";
+
 const AboutUs = () => {
+    const navigate = useNavigate();
     return (<>
         <div className="home">
             <div className="homewhite">
@@ -35,7 +38,7 @@ const AboutUs = () => {
                                 <br />
                                 <em>"We don’t replace doctors — we empower you with knowledge to make healthier decisions."</em>
                             </p>
-                            <button className="btn btn-primary mt-2">Explore Our Features</button>
+                            <button className="btn btn-primary mt-2" onClick={() => navigate("/features")} style={{ cursor: "pointer" }}>Explore Our Features</button>
                         </div>
                         <div className="col-md-6 text-center">
                             <img
@@ -108,8 +111,9 @@ const AboutUs = () => {
                                     <li className="list-group-item">✅ Personalized meal suggestions</li>
                                     <li className="list-group-item">✅ Smart AI chat for general health questions</li>
                                     <li className="list-group-item">✅ Food nutrient breakdowns</li>
-                                    <li className="list-group-item">✅ Tips for weight management and active living</li>
-                                    <li className="list-group-item">✅ Stress and sleep guidance</li>
+                                    <li className="list-group-item">✅ Medical Report Analyzer</li>
+                                    <li className="list-group-item">✅ Symptom-based suggestions</li>
+                                    <li className="list-group-item">✅ History tracking</li>
                                     <li className="list-group-item">✅ Data privacy at the core</li>
                                 </ul>
                             </div>
@@ -117,11 +121,11 @@ const AboutUs = () => {
                     </div>
 
                 </div>
-               
+
             </div>
-             
+
         </div>
-        <Footer/>
+        <Footer />
     </>);
 };
 

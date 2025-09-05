@@ -50,3 +50,24 @@
   color: #333;
   margin: 0;
 }
+
+.symptom-heading {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #007bff;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* .symptom-heading::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #28a745);
+  left: 20%;
+  bottom: 0;
+  border-radius: 5px;
+} */

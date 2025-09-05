@@ -6,7 +6,7 @@ const SuccessStories = () => {
   return (
     <div className="success-section">
       <h2 className="text-center fw-bold">Our success stories</h2>
-      <p className="text-center subtitle">So many peoples are loving this! It's a hit with thousandsof users!</p>
+      <p className="text-center subtitle">So many peoples are loving this! It's a hit with thousands of users!</p>
 
       <div className="row mt-5 justify-content-center">
         {/* Left Box */}

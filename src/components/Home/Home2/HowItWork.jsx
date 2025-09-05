@@ -48,7 +48,7 @@ const HowItWorks = () => {
           <div
             className="step-box"
             key={index}
-            style={{ marginTop: index * 100 - 100 + 'px' }} // staggered layout
+            style={{ marginTop: index * 100 - 100 + 'px' }} 
           >
             <h3>Step <span>{step.number}</span></h3>
             <div className="icon">{step.icon}</div>

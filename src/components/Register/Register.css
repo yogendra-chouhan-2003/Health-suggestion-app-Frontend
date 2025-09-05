@@ -31,10 +31,10 @@
 
 /* Robot image */
 .robot-img {
-  width: 100%;
-  max-width: 800px;
-  max-height: 950px;
-  object-fit: contain;
+  /* width: 100%;
+  height: 100%; */
+  min-height: 400px;
+  min-width: 900px;
 }
 
 /* Right form section */

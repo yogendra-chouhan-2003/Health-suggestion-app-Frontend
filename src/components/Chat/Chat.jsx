@@ -5,8 +5,9 @@ import EndPoint from '../../apis/EndPoint';
 import Header from '../Header/Header';
 import logo from "../../components/assets/logo.png";
 import man from "../../components/assets/man.png"
-
+import { useNavigate } from "react-router-dom";
 const Chat = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
     { from: 'ai', text: 'Hi there! How can I help you today?' }
@@ -31,7 +32,7 @@ const Chat = () => {
           withCredentials: true
         });
         console.log(res);
-        setHistory(res.data.history);  
+        setHistory(res.data.history);
       } catch (err) {
         console.error("Failed to fetch history:", err);
       }
@@ -66,9 +67,25 @@ const Chat = () => {
   return (<>
     <Header />
 
-    <div className="chat-layout row" style={{ marginTop: "100px" }}>
+    <div className="chat-layout row" style={{ marginTop: "50px" }}>
+      <div className='row'>
+        <div className='col-3'>
+          <button onClick={() => navigate(-1)} className="btn btn-primary mt-3 mb-1 rounded-circle">
+            Back
+          </button>
+        </div>
+        <div className='col-md-8'>
+          <h3 className="rounded-circle mt-2"><img className='rounded-circle' src={logo} alt="" style={{ height: "50px" }} /> Healify Bot</h3>
+        </div>
+        <div className='col-md-1'>
+          <button onClick={() => navigate("/medical-report")} className="btn btn-primary mt-3 mb-1 rounded-circle">
+            next
+          </button>
+        </div>
+      </div>
       {/* Left - History Sidebar */}
       <div className="col-md-3 p-3 bg-white border-end" style={{ maxHeight: "90vh", overflowY: "auto" }}>
+
         <h5 className="mb-3 text-primary fw-bold text-center">🕘 Chat History</h5>
         <div className="d-flex flex-column gap-3">
           {history.map((item, index) => (
@@ -96,11 +113,11 @@ const Chat = () => {
 
       {/* Right - Chat area */}
       <div className="col-md-9 p-0">
-        <div className="chat-container d-flex flex-column justify-content-between" style={{ height: '90vh', background: 'linear-gradient(to right, #f8f9fa, #e9ecef)' }}>
-          <h3 className="text-center fw-bold  bg-white pr-2 border-bottom shadow-sm" style={{marginRight:"750px",borderRadius:"10px",fontSize:"20px"}}><img src={logo} alt="" style={{height:"50px"}}/> Healify Bot</h3>
 
+        <div className="chat-container d-flex flex-column justify-content-between" style={{ height: '90vh', background: 'linear-gradient(to right, #f8f9fa, #e9ecef)' }}>
           {/* Chat Messages */}
           <div className="chat-messages flex-grow-1 overflow-auto" style={{ backgroundColor: "#fff" }}>
+
             {messages.map((msg, index) => (
               <div key={index} className={`d-flex my-2 ${msg.from === 'user' ? 'justify-content-end' : 'justify-content-start'}`}>
                 {msg.from === 'ai' && <img src={logo} alt="bot" className="rounded-circle me-2" style={{ height: "30px", width: "30px" }} />}
@@ -122,7 +139,7 @@ const Chat = () => {
           </div>
 
           {/* Chat Input */}
-          <form onSubmit={handleSend} className="chat-input-area d-flex border-top p-3 bg-white shadow-sm" style={{ position: "sticky", bottom: 0,height:"100px",width:"500px"}}>
+          <form onSubmit={handleSend} className="chat-input-area d-flex border-top p-3 bg-white shadow-sm" style={{ position: "sticky", bottom: 0, height: "100px", width: "500px" }}>
             <input
               type="text"
               className="form-control shadow-sm"
@@ -130,7 +147,7 @@ const Chat = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
-            <button className="btn btn-success ms-2 px-4" type="submit" style={{height:"50px",width:"100px"}}>Send</button>
+            <button className="btn btn-success ms-2 px-4" type="submit" style={{ height: "50px", width: "100px" }}>Send</button>
           </form>
         </div>
       </div>

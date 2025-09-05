@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 import "./WhyChooseSection.css";
 import icon1 from "../../assets/rightIcon.png"
 import icon2 from "../../assets/businessman.png";
-function WhyChooseSection(){
+function WhyChooseSection() {
   const navigate = useNavigate();
-  const tryHealify = ()=>{
+  const tryHealify = () => {
     navigate("/chat");
   }
-    return <>
+  return <>
     <div className="whychoose-container">
       <h2 className="whychoose-heading">Why Choose Healify?</h2>
       <p className="whychoose-subheading">
@@ -26,9 +26,10 @@ function WhyChooseSection(){
           <p>
             Get instant AI-driven answers to all your health questions. Easily your wellness journey from one convenient platform.
           </p>
-          <link rel="stylesheet"  href="" />
-          <button onClick={tryHealify} className="try-btn">
-            Try Healify now <span className="arrow"></span>
+          <link rel="stylesheet" href="" />
+          <button onClick={tryHealify} className="try-btn" >
+            Try Healify now
+            <img className="icon-arrow" src={icon1} alt="arrow" style={{ height: "30px", marginLeft: "10px" }} />
           </button>
           <link rel="" href="" />
         </div>
@@ -45,7 +46,6 @@ function WhyChooseSection(){
             </div>
 
             <div className="chat-row bot">
-              
               <div className="message">
                 <div className="user-name">Healify Bot</div>
                 <div className="time">Friday 2:21pm</div>
@@ -64,6 +64,6 @@ function WhyChooseSection(){
         </div>
       </div>
     </div>
-    </>
+  </>
 }
 export default WhyChooseSection;
